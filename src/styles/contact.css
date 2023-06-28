@@ -1,0 +1,66 @@
+@import './main.css';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    display: none;
+    color: var(--error-color);
+    font-size: 10px;
+}
+
+.form-container, .contact-container {
+    width: 50%;
+    height: 100%;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    margin: 25px;
+    padding: var(--spacing-lg);
+
+    & p {
+        text-align: center;
+    }
+}
+
+input, textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--background-color);
+    color: var(--white);
+    border: 1px solid var(--color-main);
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &.valid {
+        border: 1px solid var(--valid-color);
+    }
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: var(--spacing-sm);
+    width: 100px;
+    color: var(--white);
+    border: none;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-main);
+        font-size: 16px;
+    }
+}
+
+footer {
+    position: relative;
+    border-top: 1px solid var(--color-main);
+}

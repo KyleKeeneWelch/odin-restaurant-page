@@ -1,0 +1,124 @@
+:root {
+    --color-main: #DC1C1C;
+    --color-secondary: #dc5c1c;
+    --color-background: #000103;
+    --black: #000;
+    --white: #FFF;
+    --valid-color: #9DF148;
+    --error-color: #e22121;
+    --border-radius: 8px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@font-face {
+    font-family: 'RockBilly';
+    src: url('../assets/Rockybilly.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    word-wrap: break-word;
+    display: block;
+    min-height: 100vh;
+}
+
+a:first-of-type {
+    text-decoration: none;
+    color: var(--white)
+}
+
+.main-container {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+header {
+    height: 250px;
+
+    & .header-text-container {
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .header-text-container h1 {
+        font-size: 60px;
+        font-family: 'RockBilly';
+        text-align: center;
+    }
+
+    & h2 {
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        bottom: 100px;
+        right: 20px;
+    }
+}
+
+.navigation {
+    border-top : 1px solid var(--color-main);
+    border-bottom: 1px solid var(--color-main);
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--spacing-sm);
+
+    & a {
+        text-decoration: none;
+        color: var(--white);
+        transition: 0.2s;
+
+        &.active {
+            color: var(--color-secondary);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            color: var(--color-main);
+            font-weight: 600;
+        }
+    }
+}
+
+footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: var(--spacing-sm);
+}
+
+.fa-github {
+    font-size: 24px;
+    color: var(--white);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
